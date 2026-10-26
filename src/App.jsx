@@ -1,0 +1,53 @@
+import { useState } from 'react'
+import './App.css'
+
+function App() {
+  const [input, setInput]= useState({
+    firstname: "",
+    lastname: "",
+  });
+
+  const handleChange=(e)=>{
+    const {name,value}= e.target;
+
+    setInput((abc)=> ({...abc,[name]:value,}))
+
+  }
+  
+   const submitForm = (e) => (
+      e.preventDefault(),
+      console.log(input)
+    );
+
+  return (
+    <>
+      <form onSubmit={submitForm}>
+      <label htmlFor="firstname">firstname:
+        <input type="text"
+        name='firstname'
+        id="firsttname"
+        value={input.firstname}
+        onChange={handleChange}
+        className='bg-amber-700'  
+        />
+      </label>
+
+        <label htmlFor="lastname">lastname:
+        <input type="text"
+        name='lastname'
+        id="lastname"
+        value={input.lastname}
+        onChange={handleChange} 
+        className='bg-amber-700'
+         
+        />
+      </label>
+
+      <button type='submit'>Submit</button>
+
+      </form>
+    </>
+  )
+}
+
+export default App
