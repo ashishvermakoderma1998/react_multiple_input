@@ -5,6 +5,9 @@ function App() {
   const [input, setInput]= useState({
     firstname: "",
     lastname: "",
+    email: "",
+    tel: "",
+    password: "",
   });
 
   const handleChange=(e)=>{
@@ -42,6 +45,38 @@ function App() {
          
         />
       </label>
+
+       <label htmlFor="tel">Phone:</label>
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          value={input.tel}
+          onChange={handleChange}
+          className="bg-amber-700"
+        />
+
+      <label htmlFor="email">Email:
+        <input type="email"
+        name='email'
+        id='email'
+        value={input.email}
+        onChange={handleChange}
+        className='bg-amber-700'
+        />
+      </label>
+
+      <label htmlFor="password">Password:
+        <input type="password"
+        name='password'
+        id='password'
+        value={input.password}
+        onChange={handleChange}
+        className='bg-amber-700'
+        />
+      </label>
+
+
 
       <button type='submit'>Submit</button>
 
