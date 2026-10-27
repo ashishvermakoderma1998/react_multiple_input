@@ -80,7 +80,7 @@ function App() {
 
       <button type='submit'>Submit</button>
       
-      <h1>Ashish K</h1>
+      <h1>Ashish Ku</h1>
       </form>
     </>
   )
